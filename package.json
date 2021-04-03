@@ -1,0 +1,24 @@
+{
+  "name": "discord-web-api",
+  "version": "1.0.0",
+  "description": "a web api to get the inofrmation of any user in discord",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "url": "https://github.com/Hadi-Koubeissi/discord-web-api"
+  },
+  "keywords": [
+    "discord-web-api"
+  ],
+  "author": "Hadi-Koubeissi",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
