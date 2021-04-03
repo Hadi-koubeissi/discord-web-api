@@ -22,15 +22,24 @@ const name = require("../package.json").name,
     url = require("../package.json").repository.url;
 
 // ROUTES
-app.get("/", (req, res) => {
+app.get("/", cors(corsOptions), (req, res) => {
     const mainpage = ({ name: `${name}`, version: `${version}`, author: `${author}`, repository_url: `${url}` })
     return res.send(mainpage)
 });
 
+// GET USER INFORMATION
 app.get("/discord/user/:userID", cors(corsOptions), (req, res) => {
     client.users.fetch(req.params.userID).then((user) => {
-        const resulte = ({ username: `${user.username}`, Bot: `${user.bot}`, discriminator: `${user.discriminator}`, url: `${user.displayAvatarURL({ format: "png", size: 4096, dynamic: true })}` });
-        return res.send(resulte);
+        const results = ({ username: `${user.username}`, Bot: `${user.bot}`, discriminator: `${user.discriminator}`, url: `${user.displayAvatarURL({ format: "png", size: 4096, dynamic: true })}` });
+        return res.send(results);
+    });
+});
+
+// GET GUILD INFORMATION BUT YOU NEED TO HAVE THE BOT IN THE SAME GUILD THAT YOU ARE FETCHING INFORMATION ON
+app.get("/discord/guild/:guildID", cors(corsOptions), (req, res) => {
+    client.guilds.fetch(req.params.guildID).then((guild) => {
+        const results = ({ guildID: `${guild.id}`, guildname: `${guild.name}`, guildavatar: `${guild.iconURL({ size: 4096, dynamic: true })}`, guildrolesize: `${guild.roles.cache.size}`, guilduserssize: `${guild.members.cache.size}`,  guildemojisize: `${guild.emojis.cache.size}`, guildownerID: `${guild.ownerID}` });
+        return res.send(results);
     });
 });
 
