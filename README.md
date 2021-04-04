@@ -19,12 +19,12 @@
 
 ## Image from the site:
 
-<img align="center" style="float: left; margin: 0 10px 0 0;" alt="discord-web-api" src="./assets/site.png"> 
+<img align="center" style="float: left; margin: 0 10px 0 0;" alt="discord-web-api" src="https://zupimages.net/up/21/13/6fl1.png" height="200" width="350">
 
 
 ## Code image:
 
-<img align="center" style="float: left; margin: 0 10px 0 0;" alt="discord-web-api" src="./assets/code.png"> 
+<img align="center" style="float: left; margin: 0 10px 0 0;" alt="discord-web-api" src="https://zupimages.net/up/21/13/4f1e.png" height="200" width="350"> 
 
 * This code is created by **LWJerri#3290** github url: https://github.com/LWJerri.
 
