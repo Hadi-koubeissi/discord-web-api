@@ -1,6 +1,6 @@
 {
   "name": "discord-web-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a web api to get the inofrmation of any user in discord",
   "main": "./src/app.js",
   "scripts": {
