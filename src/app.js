@@ -38,13 +38,13 @@ app.get("/discord/user/:userID", cors(corsOptions), (req, res) => {
 // GET GUILD INFORMATION BUT YOU NEED TO HAVE THE BOT IN THE SAME GUILD THAT YOU ARE FETCHING INFORMATION ON
 app.get("/discord/guild/:guildID", cors(corsOptions), (req, res) => {
     client.guilds.fetch(req.params.guildID).then((guild) => {
-        const results = ({ guildID: `${guild.id}`, guildname: `${guild.name}`, guildavatar: `${guild.iconURL({ size: 4096, dynamic: true })}`, guildrolesize: `${guild.roles.cache.size}`, guilduserssize: `${guild.members.cache.size}`,  guildemojisize: `${guild.emojis.cache.size}`, guildownerID: `${guild.ownerID}` });
+        const results = ({ guildID: `${guild.id}`, guildname: `${guild.name}`, guildavatar: `${guild.iconURL({ size: 4096, dynamic: true })}`, guildrolesize: `${guild.roles.cache.size}`, guilduserssize: `${guild.members.cache.size}`, guildemojisize: `${guild.emojis.cache.size}`, guildownerID: `${guild.ownerID}` });
         return res.send(results);
     });
 });
 
 app.use(function (req, res, next) {
-    res.status(404).send("Sorry can't find that! the routes is :[/discord/user/:userId]")
+    res.status(404).send("Sorry, can't find that! the routes is :[/discord/user/:userId]")
 });
 
 // API START

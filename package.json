@@ -7,10 +7,12 @@
     "start": "nodemon"
   },
   "repository": {
+    "type": "git",
     "url": "https://github.com/Hadi-Koubeissi/discord-web-api"
   },
   "keywords": [
-    "discord-web-api"
+    "discord-web-api",
+    "discord-user-api"
   ],
   "author": "Hadi-Koubeissi",
   "license": "MIT",
